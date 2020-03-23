@@ -45,7 +45,7 @@ The provided `chars.csv` and `bigrams.csv` files were generated with a personal 
 
 ## Spreadsheet analysis
 
-This analisys is done in the Libreoffice spreadsheet `stats.ods`.
+This analysis is done in the Libreoffice spreadsheet `stats.ods`.
 
 ### Character counts
 
@@ -85,7 +85,7 @@ Requirements: Python 3, Pandas, Matplotlib.
 
 The script `script.py` uses the bigram statistics from `stats.csv`, and the configuration (key weights, penalties, and layouts definitions) from `config.txt` to generate the results (table and plot).
 
-The code isn't very efficient as is iterates through dataframes to generate the results. It executes in ~10s so in practice it doesn't really matter.
+The code isn't very efficient as it iterates through dataframes to generate the results. It executes in \~10s so in practice it doesn't really matter.
 
 ## Results
 
@@ -97,9 +97,9 @@ Layout|English|French|Spanish|German
 --|--|--|--|--
 MTGAP 2.0|307.988|304.948|301.514|301.202
 MTGAP "ergonomic"|312.957|320.791|308.714|309.736
-Colemak DHm|317.33|315.008|309.139|310.236
+Colemak DHm|317.330|315.008|309.139|310.236
 MTGAP|317.761|327.706|318.726|315.139
-MTGAP "shortcuts"|319.12|320.483|303.471|304.363
+MTGAP "shortcuts"|319.120|320.483|303.471|304.363
 MTGAP "standard"|321.019|318.934|308.401|313.419
 Workman|321.197|340.442|328.652|318.544
 Colemak DH|324.259|325.342|319.388|315.181
@@ -107,15 +107,15 @@ Kaehi|325.659|330.745|325.707|324.158
 MTGAP "Easy"|325.875|320.665|311.27|304.329
 Colemak|327.508|316.784|313.226|323.361
 Oneproduct|327.802|353.749|337.753|329.509
-Norman|333.891| 351.45|348.196|332.151
+Norman|333.891|351.450|348.196|332.151
 ASSET|340.265|326.668|323.568|337.202
 BEAKL|342.748|353.122|342.994|352.317
 qgmlwyfub|346.455|362.024|349.379|345.063
-Carpalx|347.63|364.385|352.467|356.831
+Carpalx|347.630|364.385|352.467|356.831
 Qwpr|349.765|342.349|332.947|341.037
 Minimak-8key|356.441|351.66|349.038|356.164
 Bépo 40%|358.328|319.911|335.219|344.977
-Coeur|366.68|326.857|332.814|345.738
+Coeur|366.680|326.857|332.814|345.738
 Dvorak|371.568|378.151|375.557|361.538
 Neo|375.679|360.455|363.138|341.696
 Qwertz|498.357|483.748|467.192|480.146
