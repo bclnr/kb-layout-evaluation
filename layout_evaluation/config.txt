@@ -4,8 +4,6 @@ Blank lines are ignored
 */
 /*
 Bigram frequencies in stats.csv
-From:
-http://practicalcryptography.com/cryptanalysis/letter-frequencies-various-languages/
 */
 
 [keys]
