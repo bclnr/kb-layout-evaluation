@@ -41,7 +41,7 @@ The script `count.py` takes the text files in the `data` folder and outputs the 
 
 The list of characters to take into account is configurable in the code, in the list `chars`. Currently it takes the basic alphabet, plus `éèêàçâîô.,-'/`. 
 
-The provided `chars.csv` and `bigrams.csv` files were generated with a personal corpus of emails (`mails_en` and `mails_fr`, 300~400kB of raw text each) and various free books and articles (`vrac_en` and `vrac_fr`, 200~400kB each).
+The provided `chars.csv` and `bigrams.csv` files were generated with a personal corpus of emails (`mails_en` and `mails_fr`, 300\~400kB of raw text each) and various free books and articles (`vrac_en` and `vrac_fr`, 200\~400kB each).
 
 ## Spreadsheet analysis
 
