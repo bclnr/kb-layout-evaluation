@@ -22,7 +22,8 @@ def main():
                 drop = True
         if drop:
             df_bigrams = df_bigrams.drop(row.Index)
-    
+    # TODO normalize df_bigrams to get 100% on each column
+
     # this prints letters present in bigrams but not in a layout
     # letters absent from a layout do not count in the grade
     # differences between layouts skew the results
