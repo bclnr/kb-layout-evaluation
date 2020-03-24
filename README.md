@@ -98,11 +98,11 @@ The results for all layouts and languages are finally normalized compared to Qwe
 
 ### Key base weights
 
-
+TODO
 
 ### Penalties
 
-
+TODO
 
 ## Limits
 
@@ -114,7 +114,7 @@ TODO: compare results with personal corpus to estimate deviation
 
 ### Accented characters
 
-The results between languages are skewed because most accented characters are not taken into account. The effect is that they falsely grade better than English. 
+The results for languages outside English are slightly off because most accented characters are not taken into account. 
 
 Currently the ignored characters are `êàçâîôñäöüß/`, mainly because those characters are absent from most considered layouts. The characters `é` and `è` were added manually to the layouts (on unused keys, on vowel side if there's one) because I particularly care about French, and due to their high frequency (2.85%).
 
@@ -122,13 +122,15 @@ The characters `'` and `-` were also added when missing, on unused keys.
 
 The issue mainly affects German (`äöüß`, 1.56% of the characters), but also French (`êàçâîô`, 0.75%) and Spanish (`ñ`, 0.22%).
 
-This effect could be mitigated by dropping them from the frequencies and normalizing the remaining ones (TODO).
+To mitigate this effect the bigram frequencies are normalized after removing the ignored characters, so the summed grade is still calculated over 100%.
 
 ## Script
 
 Requirements: Python 3, Pandas, Matplotlib.
 
 The script `script.py` uses the bigram statistics from `stats.csv`, and the configuration (key weights, penalties, and layouts definitions) from `config.txt` to generate the results (table and plot).
+
+To customize the script, edit `config.txt` and have a look at the main function `main()`.
 
 The code isn't very efficient as it iterates through dataframes to generate the results. It executes in \~10s so in practice it doesn't really matter.
 
@@ -140,33 +142,32 @@ TODO
 
 Layout|English|French|Spanish|German
 :--|--:|--:|--:|--:
-MTGAP 2.0|61.42|60.82|60.13|60.07
-MTGAP "ergonomic"|62.42|63.98|61.57|61.77
-Colemak DHm|63.29|62.82|61.65|61.87
-MTGAP|63.37|65.36|63.57|62.85
-MTGAP "shortcuts"|63.64|63.92|60.52|60.70
-MTGAP "standard"|64.02|63.61|61.51|62.51
-Workman|64.06|67.90|65.55|63.53
-Colemak DH|64.67|64.89|63.70|62.86
-Kaehi|64.95|65.96|64.96|64.65
-MTGAP "Easy"|64.99|63.95|62.08|60.69
-Colemak|65.32|63.18|62.47|64.49
-Oneproduct|65.38|70.55|67.36|65.72
-Norman|66.59|70.09|69.44|66.24
-ASSET|67.86|65.15|64.53|67.25
-BEAKL|68.36|70.43|68.41|70.27
-qgmlwyfub|69.10|72.20|69.68|68.82
-Carpalx|69.33|72.67|70.30|71.17
-Qwpr|69.76|68.28|66.40|68.02
-Minimak-8key|71.09|70.13|69.61|71.03
-Bépo 40%|71.46|63.80|66.86|68.80
-Coeur|73.13|65.19|66.38|68.95
-Dvorak|74.11|75.42|74.90|72.10
-Neo|74.92|71.89|72.42|68.15
-Qwertz|99.39|96.48|93.18|95.76
-Qwerty|100.00|97.28|91.61|96.91
-Azerty|108.06|103.32|103.36|100.75
-
+MTGAP 2.0|61.42|61.74|60.40|62.01
+MTGAP "ergonomic"|62.42|64.95|61.84|63.77
+Colemak DHm|63.29|63.78|61.93|63.87
+MTGAP|63.37|66.35|63.85|64.88
+MTGAP "shortcuts"|63.64|64.88|60.79|62.66
+MTGAP "standard"|64.02|64.57|61.78|64.53
+Workman|64.06|68.93|65.83|65.58
+Colemak DH|64.67|65.87|63.98|64.89
+Kaehi|64.95|66.96|65.24|66.74
+MTGAP "Easy"|64.99|64.92|62.35|62.65
+Colemak|65.32|64.14|62.74|66.57
+Oneproduct|65.38|71.62|67.66|67.84
+Norman|66.59|71.15|69.75|68.38
+ASSET|67.86|66.14|64.82|69.42
+BEAKL|68.36|71.49|68.71|72.53
+qgmlwyfub|69.10|73.29|69.99|71.04
+Carpalx|69.33|73.77|70.60|73.46
+Qwpr|69.76|69.31|66.69|70.21
+Minimak-8key|71.09|71.20|69.92|73.33
+Bépo 40%|71.46|64.77|67.15|71.02
+Coeur|73.13|66.17|66.67|71.18
+Dvorak|74.11|76.56|75.23|74.43
+Neo|74.92|72.98|72.74|70.35
+Qwertz|99.39|97.94|93.59|98.85
+Qwerty|100.00|98.75|92.01|100.04
+Azerty|108.06|104.89|103.82|104.00
 
 # Conclusion
 

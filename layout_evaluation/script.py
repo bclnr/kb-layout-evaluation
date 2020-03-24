@@ -22,7 +22,8 @@ def main():
                 drop = True
         if drop:
             df_bigrams = df_bigrams.drop(row.Index)
-    # TODO normalize df_bigrams to get 100% on each column
+    # normalize df_bigrams to get 100% on each column
+    df_bigrams = df_bigrams * 100 / df_bigrams.sum(axis=0)
 
     # this prints letters present in bigrams but not in a layout
     # letters absent from a layout do not count in the grade
@@ -50,7 +51,8 @@ def main():
 
     print(df_results)
 
-    # TODO print dataframe in markdown format
+    # print results in markdown format (pandas 1.0+)
+    # print(df_results.to_markdown())
     
     # to plot with pandas
     plt.style.use('ggplot') # seaborn-whitegrid or ggplot
@@ -294,8 +296,7 @@ def layout_results(df_bigrams, df_bigram_weight):
             df_results.at[row.Index, column] = (df_bigrams[column]/100 * df_bigram_weight[row.Index]).sum()
     
     # normalize the results based of Qwerty English = 100%
-    qwertyEn = df_results.at['Qwerty', 'en']
-    df_results = df_results.applymap(lambda x: round(x/qwertyEn * 100, 2))
+    df_results = df_results.applymap(lambda x: round(x/df_results.at['Qwerty', 'en'] * 100, 2))
 
     return df_results
 
