@@ -287,8 +287,13 @@ def layout_results(df_bigrams, df_bigram_weight):
     # iterating isn't efficient but this is small enough
     for column in df_results: # language
         for row in df_results.itertuples(): # layout
-            df_results.at[row.Index, column] = (df_bigrams[column] * df_bigram_weight[row.Index]).sum()
+            # sum of (probability of bigram (from df_bigram, is a percentage) times its weight)
+            df_results.at[row.Index, column] = (df_bigrams[column]/100 * df_bigram_weight[row.Index]).sum()
     
+    # normalize the results based of Qwerty English = 100%
+    qwertyEn = df_results.at['Qwerty', 'en']
+    df_results = df_results.applymap(lambda x: round(x/qwertyEn * 100, 2))
+
     return df_results
 
 
