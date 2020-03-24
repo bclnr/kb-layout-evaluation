@@ -110,15 +110,17 @@ The results for all layouts and languages are finally normalized compared to Qwe
 
 As stated in the character statistics, the results are approximative as the bigram frequencies aren't a precise and objective number for everyone. 
 
+TODO: compare results with personal corpus to estimate deviation
+
 ### Accented characters
 
 The results between languages are skewed because most accented characters are not taken into account. The effect is that they falsely grade better than English. 
 
-Currently the ignored characters are `èêàçâîô/äñößü`, mainly because those characters are absent from most considered layouts. The characters `é` and `è` were added manually to the layouts (on unused keys, on vowel side if there's one) because I particularly care about French, and due to their high frequency (2.85%).
+Currently the ignored characters are `êàçâîôñäöüß/`, mainly because those characters are absent from most considered layouts. The characters `é` and `è` were added manually to the layouts (on unused keys, on vowel side if there's one) because I particularly care about French, and due to their high frequency (2.85%).
 
 The characters `'` and `-` were also added when missing, on unused keys.
 
-The issue mainly affects German (`äößü`, 1.56% of the characters), but also French (`êàçâîô`, 0.75%) and Spanish (`ñ`, 0.22%).
+The issue mainly affects German (`äöüß`, 1.56% of the characters), but also French (`êàçâîô`, 0.75%) and Spanish (`ñ`, 0.22%).
 
 This effect could be mitigated by dropping them from the frequencies and normalizing the remaining ones (TODO).
 

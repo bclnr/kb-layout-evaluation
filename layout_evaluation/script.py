@@ -13,7 +13,7 @@ def main():
     df_layouts, df_keys, df_bigrams, df_penalties = parse_config(load_config())
 
     # as some letters are not present in all layouts, they can be manually removed from the bigrams list
-    letters_to_ignore = 'êàçâîô/äñößü'
+    letters_to_ignore = 'êàçâîôñäöüß/'
     # iterate over the dataframe to remove the letters
     for row in df_bigrams.itertuples():
         drop = False
@@ -49,6 +49,8 @@ def main():
     del df_results['fr_perso']
 
     print(df_results)
+
+    # TODO print dataframe in markdown format
     
     # to plot with pandas
     plt.style.use('ggplot') # seaborn-whitegrid or ggplot
