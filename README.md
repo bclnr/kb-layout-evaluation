@@ -130,7 +130,13 @@ Requirements: Python 3, Pandas, Matplotlib.
 
 The script `script.py` uses the bigram statistics from `stats.csv`, and the configuration (key weights, penalties, and layouts definitions) from `config.txt` to generate the results (table and plot).
 
-To customize the script, edit `config.txt` and have a look at the main function `main()`.
+To customize the script, edit `config.txt` and have a look at the `main()` function.
+
+The keys are designated by a code, shown below. The numbering includes some keys unused in the current script (in grey), in case of evolution (based on available keys on an Ergodox-like keyboard). The 3 rows by 6 columns per hand was sufficient for me.
+
+Thumb keys available on ergonomic keyboards were not included because I arbitrarily prefer not to place any alphanumeric character on them.
+
+![layout](images/layout.svg "Layout of keys")
 
 The code isn't very efficient as it iterates through dataframes to generate the results. It executes in \~10s so in practice it doesn't really matter.
 

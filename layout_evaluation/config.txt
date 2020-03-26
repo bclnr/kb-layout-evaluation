@@ -27,7 +27,6 @@ https://colemakmods.github.io/mod-dh/compare.html
 */
 
 [penalties]
-// only apply if not the same letter, and both letters on the same hand
   ,same_row,row_jump1,row_jump2
 ii,      2.0,     3.0,      4.0  // same finger
 im,      0.0,     0.5,      1.5
@@ -47,6 +46,11 @@ pr,     -2.0,    -0.8,      2.0  // inward roll
 pp,      2.5,     3.5,      5.0  // same finger
 
 /*
+Only apply if not the same letter, and both letters on the same hand.
+
+i, m, r, and p refer to the fingers (index, middle, ring, pinky)
+The columns refer to how many rows separate the two keys
+
 Penalties should:
 - limit same finger typing (except same key twice)
 - balance hands
