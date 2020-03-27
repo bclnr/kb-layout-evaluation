@@ -93,7 +93,7 @@ Thumb keys available on ergonomic keyboards are ignored as I arbitrarily prefer 
 
 ![layout_matrix](images/layout_matrix.svg "Keys names on matrix layout")
 
-The keys are designated by a code. The numbering includes space for some keys unused in the current script, in case of evolution (based on [available keys on an Ergodox-like keyboard](images/layout_ergodox.svg)).
+The keys are designated by a code (hand, row, column). The numbering includes space for some keys unused in the current script, in case of evolution (for instance for [keys on an Ergodox-like keyboard](images/layout_ergodox.svg)).
 
 ## Evaluation principle
 

@@ -138,27 +138,20 @@ def parse_config(blocks):
     # assign a letter per key corresponding to which finger is used
     for row in df_keys.itertuples():
         # pinky
-        if row.Index[1:] in ['01', '02', '08', '09', '15', '16', '22', '23']:
+        if int(row.Index[2:]) <= 2:
             df_keys.at[row.Index, 'finger'] = 'p'
         # ring
-        elif row.Index[1:] in ['03', '10', '17', '24']:
+        elif int(row.Index[2:]) == 3:
             df_keys.at[row.Index, 'finger'] = 'r'
         # middle
-        elif row.Index[1:] in ['04', '11', '18', '25']:
+        elif int(row.Index[2:]) == 4:
             df_keys.at[row.Index, 'finger'] = 'm'
         # index
-        elif row.Index[1:] in ['05', '06', '07', '12', '13', '14', '19', '20', '21', '26', '27', '28']:
+        elif int(row.Index[2:]) >= 5:
             df_keys.at[row.Index, 'finger'] = 'i'
     # assign a number per key corresponding to which row it is
     for row in df_keys.itertuples():
-        if row.Index[1:] in ['01', '02', '03', '04', '05', '06', '07']:
-            df_keys.at[row.Index, 'keyrow'] = 1
-        elif row.Index[1:] in ['08', '09', '10', '11', '12', '13', '14']:
-            df_keys.at[row.Index, 'keyrow'] = 2
-        elif row.Index[1:] in ['15', '16', '17', '18', '19', '20', '21']:
-            df_keys.at[row.Index, 'keyrow'] = 3
-        elif row.Index[1:] in ['22', '23', '24', '25', '26', '27', '28']:
-            df_keys.at[row.Index, 'keyrow'] = 4
+        df_keys.at[row.Index, 'keyrow'] = int(row.Index[1:2])
     # df_keys is a dataframe of the keys definition (base weight, finger, and row)
 
     # find the location of the layouts in the blocks list
