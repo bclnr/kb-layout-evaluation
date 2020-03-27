@@ -18,7 +18,8 @@ The evaluation method relies on grading bigrams according to weights per key and
     - [Bigram counts](#bigram-counts)
   - [Takeaway](#takeaway)
 - [Layout evaluation](#layout-evaluation)
-  - [Principle](#principle)
+  - [Focus definition](#focus-definition)
+  - [Evaluation principle](#evaluation-principle)
     - [Key base weights](#key-base-weights)
     - [Penalties](#penalties)
   - [Limits](#limits)
@@ -58,7 +59,7 @@ The characters frequencies for both English and French are quite consistent betw
 
 ![chars_en](images/chars_en.png "Character occurences in corpus, English")
 
-![chars_fr](images/chars_fr.png "Character occurences in corpus, French")
+[Here](images/chars_fr.png) is the same chart for French.
 
 ### Bigram counts
 
@@ -66,7 +67,7 @@ The bigram counts show some fairly large discrepancies however. The charts below
 
 ![bigram_en](images/bigram_en.png "Bigram occurences in corpus, English")
 
-![bigram_fr](images/bigram_fr.png "Bigram occurences in corpus, French")
+[Here](images/bigram_fr.png) is the same chart for French, with the same conclusion.
 
 ## Takeaway
 
@@ -80,7 +81,21 @@ Small differences of grades between layouts won't be conclusive. The analysis sh
 
 Contained in folder `layout_evaluation`.
 
-## Principle
+## Focus definition
+
+The influence of the physical keyboard is on the weights and penalties. The algorithm is more or less the same otherwise.
+
+The chosen weights are for an ergonomic keyboard, which is why they are symetrical. It would be similar for any non-staggered keyboard (meaning no horizontal shift between rows).
+
+Only the keys on the main "matrix" are taken into account (3×12 matrix), which are reachable by a finger easily. The "numbers" row is ignored as we focus on the alphabetical layout.
+
+Thumb keys available on ergonomic keyboards are ignored as I arbitrarily prefer not to place any alphanumeric character on them.
+
+![layout_matrix](images/layout_matrix.svg "Keys names on matrix layout")
+
+The keys are designated by a code. The numbering includes space for some keys unused in the current script, in case of evolution (based on [available keys on an Ergodox-like keyboard](images/layout_ergodox.svg)).
+
+## Evaluation principle
 
 For each language, the bigram frequencies are imported from the characters statistics, as percentage of use.
 
@@ -131,12 +146,6 @@ Requirements: Python 3, Pandas, Matplotlib.
 The script `script.py` uses the bigram statistics from `stats.csv`, and the configuration (key weights, penalties, and layouts definitions) from `config.txt` to generate the results (table and plot).
 
 To customize the script, edit `config.txt` and have a look at the `main()` function.
-
-The keys are designated by a code, shown below. The numbering includes some keys unused in the current script (in grey), in case of evolution (based on available keys on an Ergodox-like keyboard). The 3 rows by 6 columns per hand was sufficient for me.
-
-Thumb keys available on ergonomic keyboards were not included because I arbitrarily prefer not to place any alphanumeric character on them.
-
-![layout](images/layout.svg "Layout of keys")
 
 The code isn't very efficient as it iterates through dataframes to generate the results. It executes in \~10s so in practice it doesn't really matter.
 
