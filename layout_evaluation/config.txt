@@ -14,7 +14,7 @@ L41 L42 L43 L44 L45 L46 R46 R45 R44 R43 R42 R41
 [weights]
 5.0 4.0 2.5 1.8 2.0 4.0 4.0 2.0 1.8 2.5 4.0 5.0
 4.5 1.6 1.2 1.0 1.0 3.0 3.0 1.0 1.0 1.2 1.6 4.5
-5.5 4.0 2.6 2.8 2.2 4.5 4.5 2.2 2.8 2.6 4.0 5.5
+5.5 4.0 2.6 2.4 2.2 4.5 4.5 2.2 2.4 2.6 4.0 5.5
 
 /*
 Weights should:
@@ -78,6 +78,12 @@ Penalties should:
 >>Bépo 40%
 # b é p o è w v d l j z
 - a u i e , c t s r n m
+# à y x . k ' q g h f ç
+
+// https://github.com/TeXitoi/keyberon#whats-the-layout
+>>Bépo keyberon
+# b é p o è ^ v d l j z
+w a u i e , c t s r n m
 # à y x . k ' q g h f ç
 
 >>Dvorak
