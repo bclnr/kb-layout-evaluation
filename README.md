@@ -35,7 +35,7 @@ Contained in folder `character_stats`.
 
 The [layout evaluation](#layout-evaluation) needs bigram frequencies (sets of 2 letters), for each language.
 
-The frequencies are sourced from the literature [here](http://practicalcryptography.com/cryptanalysis/letter-frequencies-various-languages/). I focused on English, French, Spanish, and German. 
+The frequencies are sourced from the sources I found. I used numbers from [Practical Cryptography](http://practicalcryptography.com/cryptanalysis/letter-frequencies-various-languages/) for English, French, Spanish, and German; and from [Mayzner](http://norvig.com/mayzner.html) for English (to compare).
 
 For comparison my own corpus is also analysed (for English and French); made of my emails, some texts from free books, and some internet articles.
 
@@ -55,7 +55,7 @@ This analysis is done in the Libreoffice spreadsheet `stats.ods`.
 
 ### Character counts
 
-The characters frequencies for both English and French are quite consistent between the "theory" and my own corpus.
+The characters frequencies for both English and French are quite consistent between the sources and my own corpus.
 
 ![chars_en](images/chars_en.png "Character occurences in corpus, English")
 
@@ -63,15 +63,15 @@ The characters frequencies for both English and French are quite consistent betw
 
 ### Bigram counts
 
-The bigram counts show some fairly large discrepancies however. The charts below show the top 80 bigrams. 
+The bigram counts show more discrepancies however. The charts below show the top 80 bigrams. 
 
 ![bigram_en](images/bigram_en.png "Bigram occurences in corpus, English")
 
-[Here](images/bigram_fr.png) is the same chart for French, with the same conclusion.
+[Here](images/bigram_fr.png) is the same chart for French.
 
 ## Takeaway
 
-For the evaluation, the "theory" numbers will be used, but this shows that the results should be taken with a big grain of salt. 
+For the evaluation, the "theory" numbers will be the average from both sources for English, and the only source I have for other languages. But the differences with my own corpus show the sensitivity of those inputs, therefore the results should be taken with some tolerance.
 
 Additionally the "theory" numbers do not contain characters such as `.,-'/`. This needs to be improved (TODO).
 

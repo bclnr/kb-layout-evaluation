@@ -46,8 +46,8 @@ def main():
     df_results = df_results.sort_values(by=['en'], ascending=True)
 
     # remove results from personal corpus, they are only for comparison and clutter the results
-    del df_results['en_perso']
-    del df_results['fr_perso']
+    # del df_results['en_perso']
+    # del df_results['fr_perso']
 
     print(df_results)
 
