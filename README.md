@@ -35,7 +35,7 @@ Contained in folder `character_stats`.
 
 The [layout evaluation](#layout-evaluation) needs bigram frequencies (sets of 2 letters), for each language.
 
-The frequencies are sourced from the sources I found. I used numbers from [Practical Cryptography](http://practicalcryptography.com/cryptanalysis/letter-frequencies-various-languages/) for English, French, Spanish, and German; and from [Mayzner](http://norvig.com/mayzner.html) for English (to compare).
+The frequencies are sourced from the sources I found. I used numbers from [Practical Cryptography](http://practicalcryptography.com/cryptanalysis/letter-frequencies-various-languages/) for English, French, Spanish, and German; and from [Norvig](http://norvig.com/mayzner.html) for English (to compare).
 
 For comparison my own corpus is also analysed (for English and French); made of my emails, some texts from free books, and some internet articles.
 
@@ -63,7 +63,7 @@ The characters frequencies for both English and French are quite consistent betw
 
 ### Bigram counts
 
-The bigram counts show more discrepancies however. The charts below show the top 80 bigrams. 
+The bigram counts show more discrepancies however. The charts below show the top 80 bigrams (sorted by average of both sources for English).
 
 ![bigram_en](images/bigram_en.png "Bigram occurences in corpus, English")
 
