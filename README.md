@@ -1,11 +1,12 @@
 # Keyboard layout evaluation
 
-An evaluation of existing keyboard layouts in order to choose one for my use.
+An evaluation of existing keyboard layouts over multiple languages, focused on ergonomic keyboards.
 
-The goal is to compare keyboard layouts for an ergonomic keyboard, for several languages. 
-The first step is to gather statistics of characters use for each language; then to implement a method to compare them according to subjective criterias.
+Many keyboard layouts are defined (designed by hand or algorithmically generated) to improve on the ergonomics of Qwerty. However, they are typically assessed for typing in a single language, and on a standard keyboard. This analysis evaluates the main layouts over several languages, and for an ergonomic keyboard.
 
-The evaluation method relies on grading bigrams according to weights per key and penalties, and applying over bigram frequencies for a language.
+The method uses statistics of bigram (sets of 2 letters) use for each language, and grades them according to subjective "weights" (depending on the keys positions), to calculate a comparative difficulty between layouts.
+
+TODO: summary of results
 
 # Table of contents
 
