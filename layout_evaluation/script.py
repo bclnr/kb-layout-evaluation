@@ -22,6 +22,18 @@ def main():
                 drop = True
         if drop:
             df_bigrams = df_bigrams.drop(row.Index)
+    
+    # modify languages from theory to add the punctuation frequency from personal corpus
+    # copy the "theory" numbers to a "no punctuation" column first
+    df_bigrams['en_nopunctuation'] = df_bigrams['en']
+    df_bigrams['fr_nopunctuation'] = df_bigrams['fr']
+    punctuation = ".,-'/"
+    for row in df_bigrams.itertuples():
+        for c in punctuation:
+            if str(c) in row.Index:
+                df_bigrams.at[row.Index, 'en'] = df_bigrams.at[row.Index, 'en_perso']
+                df_bigrams.at[row.Index, 'fr'] = df_bigrams.at[row.Index, 'fr_perso']
+
     # normalize df_bigrams to get 100% on each column
     df_bigrams = df_bigrams * 100 / df_bigrams.sum(axis=0)
 
@@ -38,6 +50,8 @@ def main():
     
     # get the results
     df_results = layout_results(df_bigrams, df_bigram_weight)
+    # normalize the results based of Qwerty English = 100%
+    df_results = df_results.applymap(lambda x: round(x/df_results.at['Qwerty', 'en'] * 100, 2))
 
     # add average column with arbitrary coefs per language
     # df_results['Personal average'] = df_results.en * 0.5 + df_results.fr * 0.3 + df_results.es * 0.2
@@ -45,11 +59,8 @@ def main():
     # sort the results
     df_results = df_results.sort_values(by=['en'], ascending=True)
 
-    # remove results from personal corpus, they are only for comparison and clutter the results
-    # del df_results['en_perso']
-    # del df_results['fr_perso']
-
-    print(df_results)
+    # filter/reorder the results
+    df_results = df_results[['en', 'en_nopunctuation', 'en_perso', 'fr', 'fr_nopunctuation', 'fr_perso', 'es', 'de']]
 
     # print results in markdown format (pandas 1.0+)
     # print(df_results.to_markdown())
@@ -287,9 +298,6 @@ def layout_results(df_bigrams, df_bigram_weight):
         for row in df_results.itertuples(): # layout
             # sum of (probability of bigram (from df_bigram, is a percentage) times its weight)
             df_results.at[row.Index, column] = (df_bigrams[column]/100 * df_bigram_weight[row.Index]).sum()
-    
-    # normalize the results based of Qwerty English = 100%
-    df_results = df_results.applymap(lambda x: round(x/df_results.at['Qwerty', 'en'] * 100, 2))
 
     return df_results
 
