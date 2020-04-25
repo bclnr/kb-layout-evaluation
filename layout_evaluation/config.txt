@@ -106,6 +106,11 @@ w a u i e , c t s r n m
 é a r s t g m n e i o '
 è z x c d v k h , . / -
 
+>>Colemak DHm mod
+# q w f p b j l u y é è
+# a r s t g m n e i o -
+# z x c d v k h , . ' /
+
 >>Workman
 # q d r w b j f u p ; #
 é a s h t g y n e o i '
@@ -144,6 +149,11 @@ w a u i e , c t s r n m
 # , f h d k j c u l . #
 é o a n t g m s e r i -
 è q x b p z y w ' v ; #
+
+>>MTGAP 2.0 mod
+# , f h d k j c u l . #
+- o a n t g m s e r i è
+# q x b p z y w é v ' #
 
 >>MTGAP "Easy"
 # q w l d b j f u k p #

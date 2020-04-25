@@ -93,7 +93,7 @@ For English, we can estimate by dividing the frequencies from Vivian Cook by the
 | For French | Personal corpus | Wikipedia dump |
 | :--------- | --------------: | -------------: |
 | Period .   |           1.2 % |         0.83 % |
-| Comma      |           1.5 % |         1.02 % |
+| Comma ,    |           1.5 % |         1.02 % |
 
 Obviously some variation can be observed, but the numbers from the personal corpus pass the sanity check. It seems a bit more punctuation is used compared to the average literature, which isn't bad to consider.
 
