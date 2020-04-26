@@ -178,7 +178,7 @@ Generally the penalties are higher if the same finger is used, and also the more
 
 As stated in the character statistics, the results are approximate as the bigram frequencies aren't a precise and objective number for everyone. 
 
-However the results for [English](images/results_en.png) and [French]((images/results_fr.png)) show very little difference between the "theory" values and my personal corpus. Therefore it seems the variation in bigram use doesn't affect the final grade very significantly.
+However the results for [English](images/results_en.png) and [French](images/results_fr.png) show very little difference between the "theory" values and my personal corpus. Therefore it seems the variation in bigram use doesn't affect the final grade very significantly.
 
 ### Accented characters
 
@@ -208,7 +208,7 @@ Here are the full results, for all 4 languages and including my personal corpus 
 
 ![results](images/results_full.png "Grades per layout")
 
-In addition, here are the results for [only English](images/results_en.png) and [only French]((images/results_fr.png)). For comparison this includes the results before adding the punctuation as described [earlier](#punctuation). The necessity of taking into account the punctuation is clear. Both the "theory" and personal corpus give very similar grades, so results are quite consistent.
+In addition, here are the results for [only English](images/results_en.png) and [only French](images/results_fr.png). For comparison this includes the results before adding the punctuation as described [earlier](#punctuation). The necessity of taking into account the punctuation is clear. Both the "theory" and personal corpus give very similar grades, so results are quite consistent.
 
 Here is the complete results list. The layouts can be seen in `config.txt`.
 
