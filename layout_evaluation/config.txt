@@ -12,9 +12,9 @@ L31 L32 L33 L34 L35 L36 R36 R35 R34 R33 R32 R31
 L41 L42 L43 L44 L45 L46 R46 R45 R44 R43 R42 R41
 
 [weights]
-5.0 4.0 2.5 1.8 2.0 4.0 4.0 2.0 1.8 2.5 4.0 5.0
-4.5 1.6 1.2 1.0 1.0 3.0 3.0 1.0 1.0 1.2 1.6 4.5
-5.5 4.0 2.6 2.4 2.2 4.5 4.5 2.2 2.4 2.6 4.0 5.5
+5.0 3.6 2.4 1.8 2.2 3.5 3.5 2.2 1.8 2.4 3.6 5.0
+4.0 1.6 1.2 1.0 1.0 3.0 3.0 1.0 1.0 1.2 1.6 4.0
+5.0 3.4 2.6 2.2 1.8 4.0 4.0 1.8 2.2 2.6 3.4 5.0
 
 /*
 Weights should:
@@ -28,22 +28,22 @@ https://colemakmods.github.io/mod-dh/compare.html
 
 [penalties]
   ,same_row,row_jump1,row_jump2
-ii,      2.0,     3.0,      4.0  // same finger
-im,      0.0,     0.5,      1.5
-ir,      0.0,     0.3,      1.0
-ip,      0.0,     0.3,      0.6
-mi,     -2.0,    -0.8,      1.0  // inward roll
-mm,      2.0,     3.0,      4.0  // same finger
-mr,      0.0,     0.5,      1.5
-mp,      0.0,     0.3,      1.0
-ri,     -2.0,    -0.8,      0.8  // inward roll
-rm,     -2.5,    -1.0,      0.8  // inward roll
-rr,      2.0,     3.0,      4.0  // same finger
-rp,      0.5,     1.0,      2.0
-pi,     -2.0,    -0.8,      0.2  // inward roll
-pm,     -2.0,    -0.8,      1.0  // inward roll
-pr,     -2.0,    -0.8,      2.0  // inward roll
-pp,      2.5,     3.5,      5.0  // same finger
+ii,      2.5,     3.5,      4.5  // same finger
+im,      0.5,     1.0,      2.0
+ir,      0.5,     0.8,      1.5
+ip,      0.5,     0.8,      1.1
+mi,     -1.5,    -0.5,      1.5  // inward roll
+mm,      2.5,     3.5,      4.5  // same finger
+mr,      0.5,     1.0,      2.0
+mp,      0.5,     0.8,      1.5
+ri,     -1.5,    -0.5,      1.5  // inward roll
+rm,     -2.0,    -0.5,      1.2  // inward roll
+rr,      2.5,     3.5,      4.5  // same finger
+rp,      1.0,     1.5,      2.5
+pi,     -1.0,     0.0,      1.0  // inward roll
+pm,     -1.0,     0.0,      1.5  // inward roll
+pr,     -1.0,     0.0,      1.5  // inward roll
+pp,      3.0,     4.0,      5.5  // same finger
 
 /*
 Only apply if not the same letter, and both letters on the same hand.
@@ -76,9 +76,9 @@ Penalties should:
 è y x c v b n m , . - '
 
 >>Bépo 40%
-# b é p o è w v d l j z
+# b é p o è ^ v d l j z
 - a u i e , c t s r n m
-# à y x . k ' q g h f ç
+ç à y x . k ' q g h f w
 
 // https://github.com/TeXitoi/keyberon#whats-the-layout
 >>Bépo keyberon
@@ -149,11 +149,6 @@ w a u i e , c t s r n m
 # , f h d k j c u l . #
 é o a n t g m s e r i -
 è q x b p z y w ' v ; #
-
->>MTGAP 2.0 mod
-# , f h d k j c u l . #
-- o a n t g m s e r i è
-# q x b p z y w é v ' #
 
 >>MTGAP "Easy"
 # q w l d b j f u k p #
