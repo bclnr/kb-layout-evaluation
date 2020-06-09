@@ -219,6 +219,7 @@ Here is the complete results list. The layouts can be seen in `config.txt`.
 | [Colemak DHm](https://colemakmods.github.io/mod-dh/keyboards.html)                              |   64.66 |         64.31 |  67.88 |        67.21 |   64.18 |  64.70 |
 | [MTGAP 2.0](https://mathematicalmulticore.wordpress.com/2010/06/21/mtgaps-keyboard-layout-2-0/) |   64.91 |         64.44 |  67.21 |        65.77 |   64.01 |  64.98 |
 | [MTGAP "ergonomic"](http://mtgap.bilfo.com/official_keyboard.html)                              |   64.99 |         64.96 |  69.18 |        68.63 |   64.81 |  66.23 |
+| [White](https://github.com/mw8/white_keyboard_layout)                                           |   65.10 |         64.00 |  73.60 |        73.76 |   68.09 |  66.50 |
 | [Kaehi](https://geekhack.org/index.php?topic=98275.0)                                           |   65.56 |         64.18 |  70.35 |        69.09 |   65.92 |  67.83 |
 | [Colemak DH](https://colemakmods.github.io/mod-dh/)                                             |   65.71 |         65.29 |  69.32 |        68.64 |   65.67 |  65.43 |
 | [Workman](https://workmanlayout.org/)                                                           |   65.83 |         65.51 |  71.42 |        70.57 |   66.85 |  66.93 |

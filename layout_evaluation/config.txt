@@ -211,3 +211,10 @@ x a u e i , c t s r n h
 # q w d r k y u i l p #
 é a s t f g h n e o ; '
 è z x c v b j m , . / -
+
+// https://github.com/mw8/white_keyboard_layout
+// adapted to ergo keyboard
+>>White
+# v y d , ' j m l u ( )
+é a t h e b c s n o i -
+è p k g w q x r f . z #

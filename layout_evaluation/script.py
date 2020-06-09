@@ -62,6 +62,9 @@ def main():
     # filter/reorder the results
     # df_results = df_results[['en', 'en_nopunctuation', 'en_perso', 'fr', 'fr_nopunctuation', 'fr_perso', 'es', 'de']]
     df_results = df_results[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']]
+    # df_results = df_results[['en', 'fr', 'es', 'de']]
+    # df_results = df_results[['en', 'en_nopunctuation', 'en_perso']]
+    # df_results = df_results[['fr', 'fr_nopunctuation', 'fr_perso']]
 
     print(df_results)
     # print results in markdown format (pandas 1.0+)
