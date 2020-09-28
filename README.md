@@ -226,12 +226,14 @@ Here is the complete results list. The layouts can be seen in `config.txt`.
 | [MTGAP "standard"](http://mtgap.bilfo.com/official_keyboard.html)                               |   65.84 |         65.24 |  68.35 |        67.27 |   64.43 |  66.78 |
 | [MTGAP "shortcuts"](http://mtgap.bilfo.com/official_keyboard.html) (ROTS)                       |   66.02 |         65.59 |  68.24 |        67.30 |   62.72 |  65.44 |
 | [Oneproduct](https://geekhack.org/index.php?topic=67604.0)                                      |   66.44 |         66.07 |  73.48 |        72.44 |   68.07 |  68.45 |
+| [Hands down](https://sites.google.com/alanreiser.com/handsdown)                                 |   66.64 |         66.20 |  68.97 |        67.21 |   66.10 |  63.14 |
 | [MTGAP "Easy"](http://mtgap.bilfo.com/official_keyboard.html)                                   |   66.78 |         66.44 |  68.63 |        67.15 |   64.55 |  64.97 |
 | [Colemak](https://colemak.com/)                                                                 |   67.15 |         67.08 |  68.40 |        67.00 |   65.37 |  67.77 |
 | [BEAKL](https://deskthority.net/wiki/BEAKL)                                                     |   67.53 |         66.54 |  71.57 |        70.62 |   68.37 |  72.13 |
 | [Three](https://github.com/jackrosenthal/threelayout)                                           |   68.23 |         67.51 |  73.43 |        72.53 |   69.46 |  71.00 |
 | [Norman](https://normanlayout.info/)                                                            |   68.34 |         67.74 |  74.01 |        72.48 |   71.24 |  69.86 |
 | [ASSET](http://millikeys.sourceforge.net/asset/)                                                |   68.88 |         68.29 |  69.42 |        67.53 |   66.69 |  70.35 |
+| [Notarize](https://sites.google.com/alanreiser.com/handsdown)                                   |   69.45 |         68.83 |  70.76 |        68.81 |   67.68 |  69.21 |
 | [qgmlwyfub](http://mkweb.bcgsc.ca/carpalx/?full_optimization)                                   |   70.83 |         70.39 |  75.87 |        76.11 |   70.24 |  72.16 |
 | [Carpalx](http://mkweb.bcgsc.ca/carpalx/?full_optimization)                                     |   71.02 |         70.70 |  76.25 |        76.62 |   70.86 |  74.00 |
 | [Qwpr](https://sourceforge.net/projects/qwpr/)                                                  |   71.69 |         71.30 |  73.36 |        72.93 |   69.44 |  73.07 |
