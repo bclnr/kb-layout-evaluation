@@ -189,10 +189,28 @@ x a u e i , c t s r n h
 # z x c v b y f , . ; -
 
 // https://deskthority.net/wiki/BEAKL
->>BEAKL
-- j y o . k g c m n z #
-é h i e a u d s t r p #
-è q " ' , x w f l b v #
+>>BEAKL 15
+é q h o u x g c r f z #
+- y i e a . d s t n b ;
+è j / , k ' w m l p v #
+
+// https://www.reddit.com/r/ErgoDoxEZ/comments/gsvpug/layout_of_the_month_beakl_15/fsc1t3y/?context=3
+>>BEAKL 19
+é q . o u j w d n m , #
+- h a e i k g s r t p ;
+è z ' / y x b c l f v #
+
+// https://www.reddit.com/r/ErgoDoxEZ/comments/gsvpug/layout_of_the_month_beakl_15/ftcan68/?context=3
+>>BEAKL 19bis
+# q y o u z w d n c k #
+- h i e a , g t r s p ;
+è j ' é . x v m l f b #
+
+// https://www.reddit.com/r/ErgoMechKeyboards/comments/j1eopm/hands_down_layout_is_ready_for_daily_use/g7bjmr7/?context=3
+>>BEAKL 19 Opt French
+# w m r d v y u o q x #
+# g s n t p , i e a h -
+# k f l c b j é ' . z è
 
 // http://millikeys.sourceforge.net/asset/
 >>ASSET
