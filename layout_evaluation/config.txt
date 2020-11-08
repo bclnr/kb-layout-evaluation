@@ -254,3 +254,15 @@ x a u e i , c t s r n h
 # q w d f p y u k l ' #
 é a s t e g h n i o r #
 è z x c v b j m . , ; -
+
+// http://kennetchaz.github.io/symmetric-typing/soul.html
+>>Soul mod
+# q w l d p k m u y ; '
+è a s r t g f n e i o é
+# j z x c v b h , . / -
+
+// http://kennetchaz.github.io/symmetric-typing/niro.html
+>>Niro mod
+# q w u d p j f y l ; #
+é a s e t g h n i r o '
+è b z x c v k m , . / -

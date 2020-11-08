@@ -57,11 +57,11 @@ def main():
     df_results['Personal average'] = df_results.en * 0.5 + df_results.fr * 0.3 + df_results.es * 0.1 + df_results.de * 0.1
 
     # sort the results
-    df_results = df_results.sort_values(by=['Personal average'], ascending=True)
+    df_results = df_results.sort_values(by=['en'], ascending=True)
 
     # filter/reorder the results
-    # df_results = df_results[['en', 'en_nopunctuation', 'en_perso', 'fr', 'fr_nopunctuation', 'fr_perso', 'es', 'de']]
-    df_results = df_results[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de', 'Personal average']] # results_full.png
+    # df_results = df_results[['en', 'en_nopunctuation', 'en_perso', 'fr', 'fr_nopunctuation', 'fr_perso', 'es', 'de', 'Personal average']]
+    df_results = df_results[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']] # results_full.png
     # df_results = df_results[['en', 'fr', 'es', 'de']] # results.png
     # df_results = df_results[['en', 'en_nopunctuation', 'en_perso']] # results_en.png
     # df_results = df_results[['fr', 'fr_nopunctuation', 'fr_perso']] # results_fr.png
