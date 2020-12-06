@@ -12,6 +12,8 @@ The results show that any alternative layout gives a significant ergonomic advan
 
 ![results](images/results.png "Grades per layout")
 
+This project has also been modified and used [here](http://thedarnedestthing.com/keyboard%20layout%20evaluation).
+
 # Table of contents
 
 - [Keyboard layout evaluation](#keyboard-layout-evaluation)
