@@ -55,25 +55,42 @@ def main():
 
     # add average column with arbitrary coefs per language
     df_results['Personal average'] = df_results.en * 0.5 + df_results.fr * 0.3 + df_results.es * 0.1 + df_results.de * 0.1
-
-    # sort the results
-    df_results = df_results.sort_values(by=['en'], ascending=True)
-
-    # filter/reorder the results
-    # df_results = df_results[['en', 'en_nopunctuation', 'en_perso', 'fr', 'fr_nopunctuation', 'fr_perso', 'es', 'de', 'Personal average']]
-    df_results = df_results[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']] # results_full.png
-    # df_results = df_results[['en', 'fr', 'es', 'de']] # results.png
-    # df_results = df_results[['en', 'en_nopunctuation', 'en_perso']] # results_en.png
-    # df_results = df_results[['fr', 'fr_nopunctuation', 'fr_perso']] # results_fr.png
-
-    print(df_results)
-    # print results in markdown format (pandas 1.0+)
-    # print(df_results.to_markdown())
     
-    # to plot with pandas
-    plt.style.use('ggplot') # seaborn-whitegrid or ggplot
-    df_results.plot(kind='bar', title='Grades per layout (lower is better)', figsize=(12,8), rot=45, width=0.8)
-    plt.show()
+    plt.style.use('ggplot') # plot style: seaborn-whitegrid or ggplot
+
+    # save results_full.png
+    df_plot = df_results.sort_values(by=['en'], ascending=True)
+    df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']]
+    df_plot.plot(kind='bar', title='Grades per layout (lower is better) - Full results', figsize=(18,12), rot=60, width=0.8)
+    plt.tight_layout()
+    plt.savefig('results_full.png', dpi=300)
+
+    # save results.png
+    df_plot = df_results.sort_values(by=['en'], ascending=True)
+    df_plot = df_plot[['en', 'fr', 'es', 'de']]
+    df_plot.plot(kind='bar', title='Grades per layout (lower is better)', figsize=(18,12), rot=60, width=0.8)
+    plt.tight_layout()
+    plt.savefig('results.png', dpi=300)
+
+    # save results_en.png
+    df_plot = df_results.sort_values(by=['en'], ascending=True)
+    df_plot = df_plot[['en', 'en_nopunctuation', 'en_perso']]
+    df_plot.plot(kind='bar', title='Grades per layout (lower is better) - Results for English', figsize=(18,12), rot=60, width=0.8)
+    plt.tight_layout()
+    plt.savefig('results_en.png', dpi=300)
+
+    # save results_fr.png
+    df_plot = df_results.sort_values(by=['fr'], ascending=True)
+    df_plot = df_plot[['fr', 'fr_nopunctuation', 'fr_perso']]
+    df_plot.plot(kind='bar', title='Grades per layout (lower is better) - Results for French', figsize=(18,12), rot=60, width=0.8)
+    plt.tight_layout()
+    plt.savefig('results_fr.png', dpi=300)
+
+    # print the table
+    df_plot = df_results.sort_values(by=['en'], ascending=True)
+    # df_plot = df_plot[['en', 'en_nopunctuation', 'en_perso', 'fr', 'fr_nopunctuation', 'fr_perso', 'es', 'de', 'Personal average']]
+    df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']]
+    print(df_plot)
 
 
 def load_config():
