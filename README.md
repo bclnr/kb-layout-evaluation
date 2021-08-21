@@ -24,6 +24,7 @@ This project has also been modified and used [here](http://thedarnedestthing.com
     - [Character counts](#character-counts)
     - [Bigram counts](#bigram-counts)
   - [Punctuation](#punctuation)
+  - [Additional Languages](#additional-languages)
   - [Takeaway](#takeaway)
 - [Layout evaluation](#layout-evaluation)
   - [Focus definition](#focus-definition)
@@ -102,6 +103,13 @@ For English, we can estimate by dividing the frequencies from Vivian Cook by the
 | Comma ,    |           1.5 % |         1.02 % |
 
 Some variation can be observed, but the numbers from the personal corpus pass that sanity check. It seems a bit more punctuation is used compared to the average literature, which isn't bad to consider.
+
+## Additional languages
+In addition to the previously mentioned languages, Swedish has been added into the script as well. To check layouts with the Swedish language you need some data, namely letter frequency and bigram frequency. [The data is available here.](http://practicalcryptography.com/cryptanalysis/letter-frequencies-various-languages/swedish-letter-frequencies/)
+
+After collecting the data you need to parse it with the script `create_swedish_stats.py`. You should only need to run this once, if everything works as intended.                             
+
+To include Swedish you need to add the argument "swedish" when you run `script.py`, like `python3 script.py swedish`.
 
 ## Takeaway
 
