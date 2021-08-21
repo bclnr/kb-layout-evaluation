@@ -8,12 +8,17 @@ from io import StringIO
 import matplotlib.pyplot as plt
 
 
-def main():
-    # load the blocks from config.txt and parse them into dataframes
-    df_layouts, df_keys, df_bigrams, df_penalties = parse_config(load_config())
-
+def main(char_set='default'):
     # as some letters are not present in all layouts, they can be manually removed from the bigrams list
-    letters_to_ignore = 'êàçâîôñäöüß/'
+    if char_set == 'default':
+        letters_to_ignore = 'êàçâîôñäöüß/'
+    elif char_set == 'swedish':
+        letters_to_ignore = 'êàçâîôñüß/'
+    else:
+        raise ValueError(f'{char_set} not defined.')    # load the blocks from config.txt and parse them into dataframes
+
+    df_layouts, df_keys, df_bigrams, df_penalties = parse_config(load_config(), char_set)
+
     # iterate over the dataframe to remove the letters
     for row in df_bigrams.itertuples():
         drop = False
@@ -60,14 +65,20 @@ def main():
 
     # save results_full.png
     df_plot = df_results.sort_values(by=['en'], ascending=True)
-    df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']]
+    if char_set == 'swedish':
+        df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de', 'swe']]
+    else:
+        df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']]
     df_plot.plot(kind='bar', title='Grades per layout (lower is better) - Full results', figsize=(18,12), rot=60, width=0.8)
     plt.tight_layout()
     plt.savefig('results_full.png', dpi=300)
 
     # save results.png
     df_plot = df_results.sort_values(by=['en'], ascending=True)
-    df_plot = df_plot[['en', 'fr', 'es', 'de']]
+    if char_set == 'swedish':
+        df_plot = df_plot[['en', 'fr', 'es', 'de', 'swe']]
+    else:
+        df_plot = df_plot[['en', 'fr', 'es', 'de']]
     df_plot.plot(kind='bar', title='Grades per layout (lower is better)', figsize=(18,12), rot=60, width=0.8)
     plt.tight_layout()
     plt.savefig('results.png', dpi=300)
@@ -89,7 +100,10 @@ def main():
     # print the table
     df_plot = df_results.sort_values(by=['en'], ascending=True)
     # df_plot = df_plot[['en', 'en_nopunctuation', 'en_perso', 'fr', 'fr_nopunctuation', 'fr_perso', 'es', 'de', 'Personal average']]
-    df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']]
+    if char_set == 'swedish':
+        df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de', 'swe']]
+    else:
+        df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']]
     print(df_plot)
 
 
@@ -134,7 +148,7 @@ def load_config():
     return output
 
 
-def parse_config(blocks):
+def parse_config(blocks, char_set):
     """
     Takes the list of tuples (title, block), and outputs the dataframes
     """
@@ -196,7 +210,10 @@ def parse_config(blocks):
     # df_layouts is a dataframe of all predefined layouts to evaluate
     
     # dataframe of bigrams by language
-    df_bigrams = pd.read_csv(os.path.join(os.path.dirname(os.path.realpath('__file__')), 'stats.csv'), header=0, sep=',', index_col=0)
+    if char_set == 'swedish':
+        df_bigrams = pd.read_csv(os.path.join(os.path.dirname(os.path.realpath('__file__')), 'extended_stats.csv'), header=0, sep=',', index_col=0)
+    else:
+        df_bigrams = pd.read_csv(os.path.join(os.path.dirname(os.path.realpath('__file__')), 'stats.csv'), header=0, sep=',', index_col=0)
     # df_bigrams is a dataframe of all possible bigrams (aa, ab…) with their probability per language
 
     # find the location of the penalties in the blocks list
@@ -342,4 +359,11 @@ def removeComments(string):
 
 
 if __name__ == '__main__':
-    main()
+    if len(sys.argv) > 1:
+        if sys.argv[1] in ('default', 'swedish'):
+            char_set = sys.argv[1]
+        else:
+            print(f'{sys.argv[1]} is not a supported character set.')
+    else:
+        char_set = 'default'
+    main(char_set)
