@@ -13,7 +13,7 @@ def main():
     df_layouts, df_keys, df_bigrams, df_penalties = parse_config(load_config())
 
     # as some letters are not present in all layouts, they can be manually removed from the bigrams list
-    letters_to_ignore = 'êàçâîôñäöüß/'
+    letters_to_ignore = 'êàçâîôñäöüß/å'
     # iterate over the dataframe to remove the letters
     for row in df_bigrams.itertuples():
         drop = False
@@ -60,14 +60,14 @@ def main():
 
     # save results_full.png
     df_plot = df_results.sort_values(by=['en'], ascending=True)
-    df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']]
+    df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de', 'se']]
     df_plot.plot(kind='bar', title='Grades per layout (lower is better) - Full results', figsize=(18,12), rot=60, width=0.8)
     plt.tight_layout()
     plt.savefig('results_full.png', dpi=300)
 
     # save results.png
     df_plot = df_results.sort_values(by=['en'], ascending=True)
-    df_plot = df_plot[['en', 'fr', 'es', 'de']]
+    df_plot = df_plot[['en', 'fr', 'es', 'de', 'se']]
     df_plot.plot(kind='bar', title='Grades per layout (lower is better)', figsize=(18,12), rot=60, width=0.8)
     plt.tight_layout()
     plt.savefig('results.png', dpi=300)
@@ -89,7 +89,7 @@ def main():
     # print the table
     df_plot = df_results.sort_values(by=['en'], ascending=True)
     # df_plot = df_plot[['en', 'en_nopunctuation', 'en_perso', 'fr', 'fr_nopunctuation', 'fr_perso', 'es', 'de', 'Personal average']]
-    df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de']]
+    df_plot = df_plot[['en', 'en_perso', 'fr', 'fr_perso', 'es', 'de', 'se']]
     print(df_plot)
 
 
