@@ -284,3 +284,22 @@ x a u e i , c t s r n h
 # w l r b z ; q u d j #
 é s h n t , . a e o i '
 è f m v c / g p x k y -
+
+// https://keyboard-design.com/letterlayout.html?layout=optimal-digram.en.ansi
+>>Optimal digram
+# q y u . , f m l d p z
+é s i e a o h n r t c g
+è j ) ' ? ( x v w k b -
+
+// https://keyboard-design.com/letterlayout.html?layout=uciea-keyboard.en.ansi
+>>Uciea
+# p y u o - k d h f x q
+é c i e a ' g t n s r v
+è z " , . ; w m l b j - 
+
+// https://keyboard-design.com/letterlayout.html?layout=x1.en.ergodox
+// . and , moved
+>>x1
+# k y o ' ! f c l p q z
+é h i e a u d s t n r v
+è j ? . , # w g m b x -
