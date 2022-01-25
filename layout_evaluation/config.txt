@@ -98,15 +98,10 @@ w a u i e , c t s r n m
 
 >>Colemak DH
 # q w f p b j l u y ; #
-é a r s t g k n e i o '
-è z x c d v m h , . / -
-
->>Colemak DHm
-# q w f p b j l u y ; #
 é a r s t g m n e i o '
 è z x c d v k h , . / -
 
->>Colemak DHm mod
+>>Colemak DH mod
 # q w f p b j l u y é è
 # a r s t g m n e i o -
 # z x c d v k h , . ' /
