@@ -8,7 +8,7 @@ The method uses statistics of bigram use (sets of 2 letters) for each language, 
 
 It is focused on writing text, not code. Programming requires special characters more suited to an additional layer; this script focuses on the base layer. Also, no attempt was made to generate a new "optimum" layout, as there would be a lot of variation depending on subjective parameters. Existing layouts already perform very well here, including some generated ones.
 
-The results show that any alternative layout gives a significant ergonomic advantage over Qwerty. Several options give good results, in particular [Colemak DHm](https://colemakmods.github.io/mod-dh/keyboards.html) which also brings good familiarity, accessible shortcuts, and positive user feedback.
+The results show that any alternative layout gives a significant ergonomic advantage over Qwerty. Several options give good results, in particular [Colemak DH](https://colemakmods.github.io/mod-dh/keyboards.html) which also brings good familiarity, accessible shortcuts, and positive user feedback.
 
 ![results](layout_evaluation/results.png "Grades per layout")
 
@@ -220,16 +220,15 @@ Here is the complete results list. The layouts can be seen in `config.txt`.
 | :-------------------------------------------------------------------------------------------------------------------------------------------- | ------: | ------------: | -----: | -----------: | ------: | -----: | ------: |
 | [MTGAP](https://mathematicalmulticore.wordpress.com/the-keyboard-layout-project/)                                                             |   64.48 |         63.17 |  69.73 |        69.20 |   66.14 |  67.15 |   67.38 |
 | [BEAKL 19bis](https://www.reddit.com/r/ErgoDoxEZ/comments/gsvpug/layout_of_the_month_beakl_15/ftcan68/?context=3)                             |   64.51 |         63.47 |  66.87 |        65.81 |   64.45 |  67.92 |   69.00 |
-| Colemak DHm mod                                                                                                                               |   64.54 |         64.18 |  67.32 |        66.75 |   64.18 |  64.70 |   68.16 |
+| Colemak DH mod                                                                                                                                |   64.54 |         64.18 |  67.32 |        66.75 |   64.18 |  64.70 |   68.16 |
 | [Engram 2.0](https://engram.dev/)                                                                                                             |   64.59 |         63.32 |  71.17 |        70.28 |   66.52 |  69.11 |   69.47 |
-| [Colemak DHm](https://colemakmods.github.io/mod-dh/keyboards.html)                                                                            |   64.66 |         64.31 |  67.88 |        67.21 |   64.18 |  64.70 |   68.16 |
+| [Colemak DH](https://colemakmods.github.io/mod-dh/keyboards.html)                                                                             |   64.66 |         64.31 |  67.88 |        67.21 |   64.18 |  64.70 |   68.16 |
 | [The-1](https://docs.google.com/document/d/1yiCnIi1oagV1D8ZouMt-TRFRG8d6AfSBIwQkBvSflvY/edit)                                                 |   64.80 |         63.20 |  72.64 |        71.75 |   68.97 |  67.54 |   70.26 |
 | [MTGAP 2.0](https://mathematicalmulticore.wordpress.com/2010/06/21/mtgaps-keyboard-layout-2-0/)                                               |   64.91 |         64.44 |  67.21 |        65.77 |   64.01 |  64.98 |   66.77 |
 | [MTGAP "ergonomic"](http://mtgap.bilfo.com/official_keyboard.html)                                                                            |   64.99 |         64.96 |  69.18 |        68.63 |   64.81 |  66.23 |   66.72 |
 | [White](https://github.com/mw8/white_keyboard_layout)                                                                                         |   65.10 |         64.00 |  73.60 |        73.76 |   68.09 |  66.50 |   69.55 |
 | [Kaehi](https://geekhack.org/index.php?topic=98275.0)                                                                                         |   65.56 |         64.18 |  70.35 |        69.09 |   65.92 |  67.83 |   67.94 |
 | [x1](https://keyboard-design.com/letterlayout.html?layout=x1.en.ergodox)                                                                      |   65.63 |         64.87 |  69.76 |        69.23 |   66.28 |  68.03 |   67.91 |
-| [Colemak DH](https://colemakmods.github.io/mod-dh/)                                                                                           |   65.71 |         65.29 |  69.32 |        68.64 |   65.67 |  65.43 |   68.46 |
 | [Workman](https://workmanlayout.org/)                                                                                                         |   65.83 |         65.51 |  71.42 |        70.57 |   66.85 |  66.93 |   71.31 |
 | [MTGAP "standard"](http://mtgap.bilfo.com/official_keyboard.html)                                                                             |   65.84 |         65.24 |  68.35 |        67.27 |   64.43 |  66.78 |   66.74 |
 | [Soul mod](http://kennetchaz.github.io/symmetric-typing/soul.html)                                                                            |   65.89 |         65.53 |  68.96 |        68.00 |   64.71 |  64.38 |   68.37 |
@@ -262,7 +261,7 @@ Here is the complete results list. The layouts can be seen in `config.txt`.
 | Qwerty                                                                                                                                        |  100.00 |         99.17 |  98.90 |        98.64 |   92.45 |  99.74 |   96.08 |
 | Azerty                                                                                                                                        |  105.44 |        104.64 | 104.18 |       103.88 |  102.40 | 102.81 |  102.72 |
 
-As the "Colemak DHm" layout gave the most interesting results, a personal modified version was added to replace some characters like `;` (that can be on a layer like Shift + `,`) by the French `é`.
+As the "Colemak DH" layout gave the most interesting results, a personal modified version was added to replace some characters like `;` (that can be on a layer like Shift + `,`) by the French `é`.
 
 # Conclusion
 
@@ -270,8 +269,8 @@ All the alternative layouts perform very significantly better than the tradition
 
 ![results](layout_evaluation/results.png "Grades per layout")
 
-The options that perform the best are some Colemak variants like DHm (image below), the obscure [BEAKL 19bis](https://www.reddit.com/r/ErgoDoxEZ/comments/gsvpug/layout_of_the_month_beakl_15/ftcan68/?context=3), the [Engram](https://engram.dev/), as well as the layouts generated by [Mathematical multicore](https://mathematicalmulticore.wordpress.com/) (MTGAP). 
+The options that perform the best are some Colemak variants like DH (image below), the obscure [BEAKL 19bis](https://www.reddit.com/r/ErgoDoxEZ/comments/gsvpug/layout_of_the_month_beakl_15/ftcan68/?context=3), the [Engram](https://engram.dev/), as well as the layouts generated by [Mathematical multicore](https://mathematicalmulticore.wordpress.com/) (MTGAP). 
 
-![Colemak DHm](images/ColemakDHm.png "Colemak DHm layout")
+![Colemak DH](images/ColemakDH.png "Colemak DH layout")
 
-In conclusion, the Colemak DHm layout is particularly recommended for its good results and better shortcuts access, familiarity with Qwerty, and larger positive user feedback.
+In conclusion, the Colemak DH layout is particularly recommended for its good results and better shortcuts access, familiarity with Qwerty, and larger positive user feedback.
