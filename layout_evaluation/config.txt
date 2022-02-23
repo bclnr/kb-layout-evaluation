@@ -303,3 +303,21 @@ x a u e i , c t s r n h
 # à j o é b f d l ' q x
 - a i e u , p t s r n ^
 # k y è . w g c m h v z
+
+// https://ballerboo.github.io/boolayout/
+>>Boo
+è , . u c v q f d l y #
+é a o e s g b n t r i #
+- ; x ' w z p h m k j #
+
+// https://semilin.github.io/semimak/
+>>Semimak
+# f l h v z q w u o y é
+è s r n t k c d e a i ;
+# x ' b m j p g , . / -
+
+// https://github.com/Apsu/APT
+>>APT
+# w g d f b q l u o y é
+- r s t h k j n e a i ;
+# x c m p v z , . ' / è
