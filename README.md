@@ -2,7 +2,8 @@
 
 > [!IMPORTANT]
 > This evaluation was made back in 2020, I no longer consider it relevant. A lot of progress has happened in this space since then, in particular with better (and more detailed) ways of measuring layouts.
-> I advise looking at newer resources, such as [this tool](https://cyanophage.github.io/), [this guide](https://getreuer.info/posts/keyboards/alt-layouts/index.html#which-alt-keyboard-layout-should-i-learn), the community on [Reddit](https://www.reddit.com/r/KeyboardLayouts/) or the Discord "Alt Keybaord Layouts". For example some newer layouts worth looking at include [Gallium](https://github.com/GalileoBlues/Gallium), [Graphite](https://github.com/rdavison/graphite-layout), variations of [Hands down](https://sites.google.com/alanreiser.com/handsdown/home).
+> 
+> I advise looking at newer resources, such as [this tool](https://cyanophage.github.io/), [this guide](https://getreuer.info/posts/keyboards/alt-layouts/index.html#which-alt-keyboard-layout-should-i-learn), the community on [Reddit](https://www.reddit.com/r/KeyboardLayouts/) or the Discord "Alt Keyboard Layouts". For example some newer layouts worth looking at include [Gallium](https://github.com/GalileoBlues/Gallium), [Graphite](https://github.com/rdavison/graphite-layout), variations of [Hands down](https://sites.google.com/alanreiser.com/handsdown/home).
 
 An evaluation of existing keyboard layouts over multiple languages, focused on ergonomic keyboards.
 
